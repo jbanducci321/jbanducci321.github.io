@@ -32,6 +32,19 @@
             font-size: 18px;
         }
 
+        .aNav:hover {
+            color: darkolivegreen;
+        }
+
+        .aNav:active {
+            color: darkolivegreen;
+        }
+
+        .aNav.current {
+            color: gold;
+            font-weight: bold;
+        }
+
         body {
             background: gray;
         }
@@ -108,10 +121,26 @@
             padding: 15px;
         }
 
+        #divAbout {
+            text-align: center;
+            color: gold;
+            font-family: "Times New Roman", serif;
+            font-size: max(20px, 40px);
+            border: 2px solid midnightblue;
+            width: fit-content;
+            margin: auto;
+            padding: 15px;
+        }
+
         ul {
             display: inline-block;
             text-align: left;
             margin-top: 10px;
+        }
+
+        span {
+            font-weight: bold;
+            text-decoration: underline
         }
 
     </style>
@@ -126,7 +155,7 @@
 
     <nav>
         <a class="aNav" href="index.html"> Home </a>
-        <a class="aNav" href="about.html"> About </a>
+        <a class="aNav current" href="about.html"> About </a>
         <a class="aNav" href="contact.html"> Contact </a> <br>
         <hr>
     </nav>
@@ -153,12 +182,12 @@
     </table>
 
     <br>
-    <div>
+    <div id="divAbout">
         <h2>Our common hobbies</h2>
         <ul>
-            <li> Video Games</li>
-            <li> Coding</li>
-            <li> Going for a walk</li>
+            <li> <span>Video Games</span>:  We all enjoy playing a variety of different types of video games</li>
+            <li> <span>Coding</span>: We are all computer science majors so we each code a lot even in our free time</li>
+            <li> <span>Working Out</span>: We all like to work out in some form, whether it's going to the gym or just going on walks</li>
         </ul>
     </div>
 
