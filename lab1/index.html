@@ -4,39 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab1 Team</title>
+
+    <style>
+
+        body {
+            background: gray;
+        }
+
+        #divImg {
+            display: flex;
+            justify-content: center;
+        }
+
+        .imgTeam {
+            width: 10em;
+            height: auto;
+        }
+
+        #h1Header {
+            text-align: center;
+            font-family: "Times New Roman", serif;
+            font-size: max(20px, 40px);
+            margin: 0 auto;
+        }
+
+        nav {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .figImg {
+            text-align: center;
+            width:40%;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: medium;
+            color: gold;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-    <div>
-        <h1> Team αϐ </h1> <br>
-    </div>
+    <header>
+        <h1 id="h1Header"> Team αϐ </h1>
+    </header>
 
     <nav>
         <a href="index.html"> Home </a>
         <a href="about.html"> About </a>
         <a href="contact.html"> Contact </a> <br>
+        <hr>
     </nav>
 
-    <div>
-        <hr>
+    <div id="divImg">
+        <figure class="figImg">
+            <img class="imgTeam" src="IMG_3733.jpeg" alt="mem1"> <br>
+            <figcaption>Carlos Cupa</figcaption>
+        </figure>
+
+        <figure class="figImg">
+            <img class="imgTeam" src="hahafunnipicture.jpeg" alt="mem4"> <br>
+            <figcaption>Carson Cardoza</figcaption>
+        </figure>
+
+        <figure class="figImg">
+            <img class="imgTeam" src="IMG_2531.jpeg" alt="mem2"> <br>
+            <figcaption>Jacob Banducci</figcaption>
+        </figure>
+
+        <figure class="figImg">
+            <img class="imgTeam" src="image.jpg" alt="mem3"> <br>
+            <figcaption>Luis Cortes</figcaption>
+        </figure>
     </div>
-
-    <div>
-        <h1> Team αϐ </h1>
-    </div>
-
-    <img src="IMG_3733.jpeg" width="200" alt="mem1"> <br>
-    <p>Carlos Cupa</p>
-
-    <img src="hahafunnipicture.jpeg" width="200" alt="mem4"> <br>
-    <p>Carson Cardoza</p>
-
-    <img src="IMG_2531.jpeg" width="200" alt="mem2"> <br>
-    <p>Jacob Banducci</p>
-
-    <img src="image.jpg" width="200" alt="mem3"> <br>
-    <p>Luis Cortes</p>
 
     <p> Welcome to our team website</p>
     <p> "Our greatest weakness lies in giving up." - Thomas Edison </p>
