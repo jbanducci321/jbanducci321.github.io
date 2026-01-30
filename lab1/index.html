@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <title>Lab1 Team</title>
 
@@ -17,13 +21,13 @@
         }
 
         .imgTeam {
-            width: 10em;
+            width: 20em;
             height: auto;
         }
 
         #h1Header {
             text-align: center;
-            font-family: "Times New Roman", serif;
+            font-family: "Playwrite NZ Basic", serif;
             font-size: max(20px, 40px);
             margin: 0 auto;
         }
@@ -32,6 +36,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            background-color: midnightblue;
+            padding: 15px;
         }
 
         .figImg {
@@ -45,57 +51,101 @@
             color: gold;
         }
 
+        .aNav {
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        #footerImg {
+            width: 10em;
+            height: auto;
+            background-color: white;
+
+        }
+
+        #footerFigure {
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: midnightblue;
+            border : 2px solid white;
+        }
+        footer {
+            font-size: small;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: dodgerblue;
+        }
+
+        #divMessage {
+            text-align: center;
+            border: 2px solid midnightblue;
+            width: fit-content;
+            margin: auto;
+            padding: 15px;
+        }
+
     </style>
 
 </head>
 
 <body>
 
-    <header>
-        <h1 id="h1Header"> Team αϐ </h1>
-    </header>
+<header>
+    <h1 id="h1Header"> Team αϐ </h1>
+</header>
 
-    <nav>
-        <a href="index.html"> Home </a>
-        <a href="about.html"> About </a>
-        <a href="contact.html"> Contact </a> <br>
-        <hr>
-    </nav>
-
-    <div id="divImg">
-        <figure class="figImg">
-            <img class="imgTeam" src="IMG_3733.jpeg" alt="mem1"> <br>
-            <figcaption>Carlos Cupa</figcaption>
-        </figure>
-
-        <figure class="figImg">
-            <img class="imgTeam" src="hahafunnipicture.jpeg" alt="mem4"> <br>
-            <figcaption>Carson Cardoza</figcaption>
-        </figure>
-
-        <figure class="figImg">
-            <img class="imgTeam" src="IMG_2531.jpeg" alt="mem2"> <br>
-            <figcaption>Jacob Banducci</figcaption>
-        </figure>
-
-        <figure class="figImg">
-            <img class="imgTeam" src="image.jpg" alt="mem3"> <br>
-            <figcaption>Luis Cortes</figcaption>
-        </figure>
-    </div>
-
-    <p> Welcome to our team website</p>
-    <p> "Our greatest weakness lies in giving up." - Thomas Edison </p>
-
+<nav>
+    <a class="aNav" href="index.html"> Home </a>
+    <a class="aNav" href="about.html"> About </a>
+    <a class="aNav" href="contact.html"> Contact </a> <br>
     <hr>
-    <footer>
-        <p> Hello! Thank you for visiting our website. We are a Software Engineer team that has been recently hired at
-            the Acme Corporation.
-            Feel free to contact us! </p>
-        <p> CST336 Internet Programming. 2026 Banducci Cardoza, Cortes, Cupa
+</nav>
+
+<div id="divImg">
+    <figure class="figImg">
+        <img class="imgTeam" src="IMG_3733.jpeg" alt="mem1"> <br>
+        <figcaption>Carlos Cupa</figcaption>
+    </figure>
+
+    <figure class="figImg">
+        <img class="imgTeam" src="hahafunnipicture.jpeg" alt="mem4"> <br>
+        <figcaption>Carson Cardoza</figcaption>
+    </figure>
+
+    <figure class="figImg">
+        <img class="imgTeam" src="IMG_2531.jpeg" alt="mem2"> <br>
+        <figcaption>Jacob Banducci</figcaption>
+    </figure>
+
+    <figure class="figImg">
+        <img class="imgTeam" src="image.jpg" alt="mem3"> <br>
+        <figcaption>Luis Cortes</figcaption>
+    </figure>
+    <br>
+</div>
+
+<div id="divMessage">
+    <h2> Welcome to our team website</h2> <br>
+    <h3> "Our greatest weakness lies in giving up." - Thomas Edison </h3> <br>
+</div>
+
+<hr>
+<footer>
+    <figure id="footerFigure">
+        <img id="footerImg" src="csumb.png.webp" alt="CSUMB Logo">
+        <p> Hello! Thank you for visiting our website. Feel free to contact us! </p>
+        <p> CST336 Internet Programming. 2026 Banducci, Cardoza, Cortes, and Cupa
             Disclaimer: The information in this webpage is fictitious. It is used for academic purposes only.</p>
-        <img src="csumb.png.webp" alt="CSUMB Logo">
-    </footer>
+    </figure>
+</footer>
 </body>
 
 </html>

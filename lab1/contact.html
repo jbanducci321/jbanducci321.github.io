@@ -1,15 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-    <h1> Contact </h1>
-</header>
-<nav>
-    <a href="index.html"> Home </a>
-    <a href="about.html"> About </a>
-    <a href="contact.html"> Contact </a> <br>
-</nav>
-<footer>
-    <img src="csumb.png.webp" width="200" alt="mem1">
-</footer>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+    #googleForm {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+    }
+
+    body {
+        background: gray;
+    }
+
+    nav {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: midnightblue;
+        padding: 15px;
+    }
+
+    .aNav {
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    h1{
+        text-align: center;
+        font-family: "Playwrite NZ Basic", serif;
+    }
+
+    #links {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: medium;
+        color: gold;
+    }
+
+    #footerImg {
+        width: 10em;
+        height: auto;
+        background-color: white;
+
+    }
+
+    #footerFigure {
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: midnightblue;
+        border : 2px solid white;
+    }
+    footer {
+        font-size: small;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: dodgerblue;
+    }
+
+</style>
+<body>
+<div>
+    <h1> Contact Us </h1> <br>
+</div>
+
+<nav>
+    <a class="aNav" href="index.html"> Home </a>
+    <a class="aNav" href="about.html"> About </a>
+    <a class="aNav" href="contact.html"> Contact </a> <br>
+    <hr>
+</nav>
+<div>
+    <section>
+        <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeE28YrN-pEE5Q73nQHG1cIw7AuBub4Td5njfkLbib4RhDgDA/viewform?usp=sharing&ouid=102345268696666860741" frameborder="0" width="640"
+                height="700"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
+        </iframe>
+    </section>
+</div>
+
+<div>
+    <hr>
+</div>
+<footer>
+    <figure id="footerFigure">
+        <img id="footerImg" src="csumb.png.webp" alt="CSUMB Logo">
+        <p> Hello! Thank you for visiting our website. Feel free to contact us! </p>
+        <p> CST336 Internet Programming. 2026 Banducci, Cardoza, Cortes, and Cupa
+            Disclaimer: The information in this webpage is fictitious. It is used for academic purposes only.</p>
+    </figure>
+</footer>
+</body>
 </html>
