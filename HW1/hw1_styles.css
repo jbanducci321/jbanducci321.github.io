@@ -68,7 +68,7 @@ nav {
     margin: 0 auto;
 }
 
-#mainFigure {
+.mainFigure {
     text-align: center;
     margin: 0;
     width: 45%;
@@ -107,7 +107,7 @@ figcaption {
 
 #secondSection {
     display: flex;
-    flex-direction: column; /*Stacks items vertically*/
+    /*flex-direction: column; !*Stacks items vertically*!*/
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -128,10 +128,24 @@ figcaption {
     margin-bottom: 8px;
 }
 
+#secondSectionImg {
+    width: 50%;
+    height: auto;
+}
+
+#secondFig {
+    text-align: center;
+    width: 60%;
+    align-items: center;
+    gap: 20px;                  /* space between image and text */
+    margin: 0;
+}
+
+
 /*footer section*/
 
 footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;
