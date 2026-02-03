@@ -13,15 +13,15 @@ header {
     text-align: center;
 }
 
-#h1Header {
+.h1Header {
     text-align: center;
     font-size: 40px;
     margin: 20px auto;
     color: #2b004f;
 }
 
-#subtitle {
-
+.subtitle {
+    font-size: 20px;
 }
 
 /*Navigation bar section*/
@@ -64,7 +64,7 @@ nav {
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -87,26 +87,45 @@ figcaption {
     font-size: 16px;
 }
 
-#mainDivText {
-    width: 55%;
+.mainDivText {
+    width: 50%;
     background: #f6f0ff;
     padding: 15px;
     border-radius: 10px;
 }
 
-#mainDivText h2 {
+.mainDivText h2 {
     margin-top: 0;
     color: #2b004f;
 }
 
-#mainDivText h3 {
+.mainDivText h3 {
     color: #2b004f;
 }
 
 /*Second Section*/
 
 #secondSection {
+    display: flex;
+    flex-direction: column; /*Stacks items vertically*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+    max-width: 18000px;
+    margin: 30px auto;
+}
 
+#mainList {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+
+#mainList li {
+    text-align: left;
+    margin-bottom: 8px;
 }
 
 /*footer section*/
@@ -132,4 +151,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+footer ul li {
+    margin-bottom: 5px;
+}
 
