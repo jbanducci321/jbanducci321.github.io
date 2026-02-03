@@ -1,0 +1,135 @@
+body {
+    background: #e9ddff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*Header section*/
+
+header {
+    align-items: center;
+    font-size: 35px;
+    color:black;
+    text-align: center;
+}
+
+#h1Header {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px auto;
+    color: #2b004f;
+}
+
+#subtitle {
+
+}
+
+/*Navigation bar section*/
+
+nav {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #3a0a6a;
+}
+
+.aNav {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.aNav:hover {
+    color: #ffd86b;
+}
+
+.aNav:active {
+    color: #ffd86b;
+}
+
+.aNav.current {
+    color: deeppink;
+    font-weight: bold;
+}
+
+/*First Section*/
+
+#firstSection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#mainFigure {
+    text-align: center;
+    margin: 0;
+    width: 45%;
+}
+
+#mainImg {
+    width: 100%;
+    height: auto;
+    border: 3px solid #3a0a6a;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 8px;
+    color: #3a0a6a;
+    font-size: 16px;
+}
+
+#mainDivText {
+    width: 55%;
+    background: #f6f0ff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#mainDivText h2 {
+    margin-top: 0;
+    color: #2b004f;
+}
+
+#mainDivText h3 {
+    color: #2b004f;
+}
+
+/*Second Section*/
+
+#secondSection {
+
+}
+
+/*footer section*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: #3a0a6a;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffd86b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
