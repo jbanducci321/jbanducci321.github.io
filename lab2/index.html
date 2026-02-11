@@ -7,31 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lab 2: Guess the Number</title>
 
-    <script  src="js/script.js" defer></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <h1>Guess the Number!</h1>
-    </header>
+<header>
+    <h1>Guess the Number!</h1>
+    <h2>Guess a number between 1 and 99</h2>
+</header>
 
+<hr>
+<br>
+<!--- Text box for entering a number--->
+    <div id="guessBox">
+        Guess:
+        <input id="guess" type="text" size="10">
+    </div>
+    <br>
 
-    <!--- Text box for entering a number--->
-    Guess:
-    <input id="guess" type="text" size="5">
+    <div id="buttons">
+        <button id="guessButton">Guess!</button>
+
+        <button id="playAgainButton" style="display:none;">Play Again!</button>
+    </div>
 
     <br>
 
-    <button id="guessButton">Guess!</button>
+    <div id="mainDiv">
+        <p>
+            Wins: <span id="wins">0</span> |
+            Losses: <span id="losses">0</span>
+        </p>
 
-    <br>
+        Previous Guesses:
+        <span id="userGuesses"></span>
 
-    Previous Guesses:
-    <span id="userGuesses"></span>
+        <h2 id="displayResponse"></h2>
 
-    <h2 id="displayResponse"></h2>
-
-    <h3 id="attemptMsg"></h3>
+        <h3 id="attemptMsg"></h3>
+    </div>
 
 </body>
 </html>
