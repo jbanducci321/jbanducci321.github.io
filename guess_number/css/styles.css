@@ -1,0 +1,53 @@
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtYifQ7_otPxfuw_fXTV2Kh8ICupmKS-scg&s");
+
+    /* Center the image within the viewport */
+    background-position: center;
+
+    /* Prevent the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Scale the image to cover the entire container while preserving aspect ratio */
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#guessBtn {
+    border-radius: 5px;
+    border: chocolate 1px solid;
+    font-family: Arial, sans-serif;
+}
+
+#guessBtn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#playerGuess {
+    border: 1px solid black;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+#main {
+    background: beige;
+    height: auto;
+    width: 30em;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 10em;
+    border: 2px solid red;
+}
