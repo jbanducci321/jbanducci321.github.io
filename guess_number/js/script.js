@@ -1,6 +1,10 @@
 //Global variables
 let randomNumber;
 let attempts = 0;
+let attemptsCount = 7;
+
+let totalWins = 0;
+let totalLosses = 0;
 
 //Event Listeners
 document.querySelector("#guessBtn").addEventListener("click", checkGuess);
@@ -12,6 +16,9 @@ function initializeGame() {
     randomNumber = Math.floor(Math.random() * 99) + 1;
     console.log("randomNumber: " + randomNumber);
     attempts = 0;
+    attemptsCount = 7;
+
+    document.querySelector("#attempts").textContent = attemptsCount;
 
     //hiding the Reset button
     document.querySelector("#resetBtn").style.display = "none";
@@ -34,9 +41,11 @@ function checkGuess() {
     let feedback = document.querySelector("#feedback");
     feedback.textContent = "";
     let guess = document.querySelector("#playerGuess").value;
+
+    document.querySelector("#attempts").textContent = attemptsCount - attempts - 1;
+
     console.log("Player guess: " + guess);
     if (guess < 1 || guess > 99) {
-
         feedback.textContent = "Enter a number between 1 and 99";
         feedback.style.color = "red";
         return;
@@ -48,6 +57,8 @@ function checkGuess() {
     if (guess == randomNumber) {
         feedback.textContent = "You guessed it! You Won!";
         feedback.style.color = "darkgreen";
+        totalWins++;
+        document.querySelector("#totalWins").textContent = totalWins;
         gameOver();
     }
     else {
@@ -55,6 +66,8 @@ function checkGuess() {
         if (attempts == 7) {
             feedback.textContent = "Sorry you lost";
             feedback.style.color = "red";
+            totalLosses++;
+            document.querySelector("#totalLosses").textContent = totalLosses;
             gameOver();
         }
         else if (guess > randomNumber) {
