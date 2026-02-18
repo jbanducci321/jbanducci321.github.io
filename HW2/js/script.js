@@ -4,21 +4,31 @@ document.querySelector("#nextButton").addEventListener("click", nextPoke);
 
 //Global vars
 let score = 0; //will hold number of right guesses
-let entryNum = Math.floor(Math.random() * 151) + 1;
+let totalGuesses = 0; //will track the total number of guesses (right and wrong)
+let entryNum = Math.floor(Math.random() * 1000) + 1;
 let pokeName = "";
 
 async function getPokeImg() {
-    let url = "https://pokeapi.co/api/v2/pokemon/" + entryNum;
+    let headerNameElement;
+    let imageElement;
+    try {
+        let url = "https://pokeapi.co/api/v2/pokemon/" + entryNum;
 
-    let response = await fetch(url);
-    let data = await response.json();
+        let response = await fetch(url);
+        let data = await response.json();
 
-    let imageElement = document.createElement("img");
-    imageElement.src = data.sprites.front_default;
 
-    let headerNameElement = document.createElement("h3");
-    pokeName = data.forms[0].name
-    headerNameElement.textContent = "The correct answer is: " + pokeName;
+        imageElement = document.createElement("img");
+        imageElement.src = data.sprites.other["official-artwork"].front_default;
+
+        headerNameElement = document.createElement("h3");
+        pokeName = data.forms[0].name
+        console.log("Pokémon name: " + pokeName);
+    }
+    catch (error) {
+        console.log(error);
+    }
+    headerNameElement.textContent = "This Pokémon is: " + pokeName.charAt(0).toUpperCase() + pokeName.slice(1);
 
     document.querySelector("#pokeDisplayImg").append(imageElement);
     document.querySelector("#pokeDisplayText").append(headerNameElement);
@@ -28,12 +38,19 @@ async function getPokeImg() {
 }
 
 function checkAnswer() {
-    let userGuess = document.querySelector("#pokeNameText").value; //Grabs the user guess from the text input
+    //Makes the name matching case-insensitive
+    let userGuess = document.querySelector("#pokeNameText").value.trim().toLowerCase();
+    console.log("User guess: " + userGuess);
+    let correctName = pokeName.toLowerCase();
+
     let feedbackDiv = document.querySelector("#pokeResult");
 
-    if (userGuess == pokeName) {
+    totalGuesses++;//increments the total guess count
+
+    if (userGuess == correctName) {
         feedbackDiv.textContent = "Correct";
         feedbackDiv.style.color = "green";
+        score++; //Increments correct answer counter
     }
     else {
         feedbackDiv.textContent = "Wrong";
@@ -45,8 +62,14 @@ function checkAnswer() {
 }
 
 function nextPoke() {
-    entryNum = Math.floor(Math.random() * 151) + 1;
+    entryNum = Math.floor(Math.random() * 1000) + 1;
     document.querySelector("#answerInputDiv").style.display = "block";
+
+    //Clears the current text in the divs holding HTML
+    document.querySelector("#pokeDisplayImg").innerHTML = "";
+    document.querySelector("#pokeDisplayText").innerHTML = "";
+
+    document.querySelector("#pokeNameText").value = "";
     getPokeImg();
 }
 
