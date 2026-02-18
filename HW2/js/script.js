@@ -7,6 +7,7 @@ let score = 0; //will hold number of right guesses
 let totalGuesses = 0; //will track the total number of guesses (right and wrong)
 let entryNum = Math.floor(Math.random() * 1000) + 1;
 let pokeName = "";
+let history = []; //array to hold the names of the past guesses
 
 async function getPokeImg() {
     let headerNameElement;
@@ -56,6 +57,21 @@ function checkAnswer() {
         feedbackDiv.textContent = "Wrong";
         feedbackDiv.style.color = "red";
     }
+
+    history.push({
+        correct: pokeName,
+        guess: userGuess,
+        isCorrect: (userGuess == correctName)
+    });
+
+    //Keeps only the 5 newest ones
+    if (history.length > 5) {
+        history.shift(); // removes oldest
+    }
+
+    updateHistoryDisplay();
+    updateScoreBoard();
+
     document.querySelector("#pokeDisplayText").style.display = "block";
     document.querySelector("#nextButton").style.display = "block";
     document.querySelector("#answerInputDiv").style.display = "none";
@@ -64,13 +80,33 @@ function checkAnswer() {
 function nextPoke() {
     entryNum = Math.floor(Math.random() * 1000) + 1;
     document.querySelector("#answerInputDiv").style.display = "block";
-
+    document.querySelector("#pokeResult").textContent = "";
     //Clears the current text in the divs holding HTML
     document.querySelector("#pokeDisplayImg").innerHTML = "";
     document.querySelector("#pokeDisplayText").innerHTML = "";
 
     document.querySelector("#pokeNameText").value = "";
     getPokeImg();
+}
+
+function updateHistoryDisplay() {
+    let historyDiv = document.querySelector("#historyDisplay");
+    historyDiv.innerHTML = ""; // reset display each time
+
+
+    for (let i = 0; i < history.length; i++) {
+        let p = document.createElement("p");
+        p.textContent = `#${i + 1}: ${history[i].guess} (Answer: ${history[i].correct})`;
+
+        p.style.color = history[i].isCorrect ? "green" : "red";
+
+        historyDiv.append(p);
+    }
+}
+
+function updateScoreBoard() {
+    let currentScore = score / totalGuesses;
+    document.querySelector("#scoreBoard").textContent = "Score: " + currentScore;
 }
 
 getPokeImg();
