@@ -59,13 +59,12 @@ function checkAnswer() {
     }
 
     history.push({
-        correct: pokeName,
-        guess: userGuess,
-        isCorrect: (userGuess == correctName)
+        correct: pokeName.charAt(0).toUpperCase() + pokeName.slice(1),
+        guess: userGuess.charAt(0).toUpperCase() + userGuess.slice(1),
     });
 
-    //Keeps only the 5 newest ones
-    if (history.length > 5) {
+    //Keeps only the 20 newest ones
+    if (history.length > 25) {
         history.shift(); // removes oldest
     }
 
@@ -81,6 +80,7 @@ function nextPoke() {
     entryNum = Math.floor(Math.random() * 1000) + 1;
     document.querySelector("#answerInputDiv").style.display = "block";
     document.querySelector("#pokeResult").textContent = "";
+
     //Clears the current text in the divs holding HTML
     document.querySelector("#pokeDisplayImg").innerHTML = "";
     document.querySelector("#pokeDisplayText").innerHTML = "";
@@ -90,23 +90,20 @@ function nextPoke() {
 }
 
 function updateHistoryDisplay() {
+    document.querySelector("#priorGsH").style.display = "block";
     let historyDiv = document.querySelector("#historyDisplay");
     historyDiv.innerHTML = ""; // reset display each time
 
-
     for (let i = 0; i < history.length; i++) {
         let p = document.createElement("p");
-        p.textContent = `#${i + 1}: ${history[i].guess} (Answer: ${history[i].correct})`;
-
-        p.style.color = history[i].isCorrect ? "green" : "red";
-
+        p.textContent = "User Guess: " + history[i].guess + " | Correct Answer: " + history[i].correct;
         historyDiv.append(p);
     }
 }
 
 function updateScoreBoard() {
     let currentScore = score / totalGuesses;
-    document.querySelector("#scoreBoard").textContent = "Score: " + currentScore;
+    document.querySelector("#scoreBoard").textContent = "Score: " + currentScore.toFixed(2);
 }
-
-getPokeImg();
+document.querySelector("#priorGsH").style.display = "none"; //Starts with the score display hidden
+getPokeImg(); //Initial call to the api

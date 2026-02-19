@@ -1,0 +1,113 @@
+body {
+    background-color: #7FDBFF;  /* nice aqua blue */
+
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png");
+
+    background-repeat: repeat;
+    background-size: 75px;
+    background-position: top left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    align-items: center;
+    font-size: 35px;
+    text-align: center;
+
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 70px;
+    margin: 20px auto;
+    color: gold;
+}
+
+#mainContent {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#game {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#leftSideDisplay {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    text-align: left;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+}
+
+#pokeDisplayText {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#rightSideDisplay {
+    position: absolute;
+    right: 50px;
+    top: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+#nextButton {
+    font-size: 18px;
+    padding: 10px 18px;
+    margin-bottom: 10px;
+}
+
+#pokeResult {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    padding: 12px 20px;
+    border: 4px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#nextButton {
+    background-color: #FF4136;
+    color: white;
+}
+
+
+#guessButton {
+    background-color: #2ECC40;
+    color: white;
+}
+
+#answerInputDiv label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#pokeNameText {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 6px;
+    width: 200px;
+}
+
