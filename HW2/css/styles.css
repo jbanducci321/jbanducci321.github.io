@@ -1,5 +1,5 @@
 body {
-    background-color: #7FDBFF;  /* nice aqua blue */
+    background-color: #7FDBFF;
 
     background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png");
 
@@ -78,7 +78,7 @@ h1 {
     font-weight: bold;
     background-color: #ffffff80;
     border-radius: 50px;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 button {
