@@ -1,6 +1,7 @@
 //Event listeners
 document.querySelector("#guessButton").addEventListener("click", checkAnswer);
 document.querySelector("#nextButton").addEventListener("click", nextPoke);
+document.querySelector("#giveUpButton").addEventListener("click", giveUp)
 
 //Global vars
 let score = 0; //will hold number of right guesses
@@ -70,6 +71,31 @@ function checkAnswer() {
 
     updateHistoryDisplay();
     updateScoreBoard();
+
+    document.querySelector("#pokeDisplayText").style.display = "block";
+    document.querySelector("#nextButton").style.display = "block";
+    document.querySelector("#answerInputDiv").style.display = "none";
+}
+
+function giveUp () {
+    let userGuess = "N/A"
+    let feedbackDiv = document.querySelector("#pokeResult");
+
+
+    feedbackDiv.style.color = "black";
+    feedbackDiv.textContent = "You passed";
+
+    history.push({
+        correct: pokeName.charAt(0).toUpperCase() + pokeName.slice(1),
+        guess: userGuess.charAt(0).toUpperCase() + userGuess.slice(1),
+    });
+
+    //Keeps only the 20 newest ones
+    if (history.length > 25) {
+        history.shift(); // removes oldest
+    }
+
+    updateHistoryDisplay();
 
     document.querySelector("#pokeDisplayText").style.display = "block";
     document.querySelector("#nextButton").style.display = "block";
