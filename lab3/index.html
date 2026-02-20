@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quiz</title>
+    <title>Lab 3: Quiz</title>
 
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/script.js" defer></script>
@@ -19,65 +19,75 @@
     <h1>Quiz</h1>
     <h2 id="scoreDisplay"></h2>
 
-    1. What was the first Pokémon?
-    <br>
-    <div id="q1ChoicesDiv"></div>
-    <br>
-    <h3 id="q1Feedback"></h3>
+    <div id="q1Div">
+        1. What was the first Pokémon?
+        <br>
+        <div id="q1ChoicesDiv"></div>
+        <br>
+        <h3 id="q1Feedback"></h3>
+    </div>
     <br><br>
 
-    2. What Pokémon is the main villain in the first Pokémon movie?
-    <br>
-    <label>Enter name of the Pokémon:
-        <input type="text" id="q2">
-    </label>
-    <br>
-    <h3 id="q2Feedback"></h3>
+    <div id="q2Div">
+        2. What Pokémon is the main villain in the first Pokémon movie?
+        <br>
+        <label>Enter name of the Pokémon:
+            <input type="text" id="q2">
+        </label>
+        <br>
+        <h3 id="q2Feedback"></h3>
+    </div>
     <br><br>
 
-    3. What year was the first Pokémon game released?
-    <br>
-    <label>Enter the year:
-        <input type="number" id="q3">
-    </label>
-    <br>
-    <h3 id="q3Feedback"></h3>
+    <div id="q3Div">
+        3. What year was the first Pokémon game released?
+        <br>
+        <label>Enter the year:
+            <input type="number" id="q3">
+        </label>
+        <br>
+        <h3 id="q3Feedback"></h3>
+    </div>
     <br><br>
 
-    4. What type is Pikachu?
-    <br>
-    <label for="q4">Which type is Pikachu?</label>
-    <select id="q4" name="pikachu-type">
-        <option value="">--Choose an answer--</option>
-        <option value="Fire">Fire</option>
-        <option value="Water">Water</option>
-        <option value="Electric">Electric</option>
-        <option value="Frass">Grass</option>
-    </select>
-    <br>
-    <h3 id="q4Feedback"></h3>
+    <div id="q4Div">
+        4. What type is Pikachu?
+        <br>
+        <label for="q4">Which type is Pikachu?</label>
+        <select id="q4" name="pikachu-type">
+            <option value="">--Choose an answer--</option>
+            <option value="Fire">Fire</option>
+            <option value="Water">Water</option>
+            <option value="Electric">Electric</option>
+            <option value="Frass">Grass</option>
+        </select>
+        <br>
+        <h3 id="q4Feedback"></h3>
+    </div>
     <br><br>
 
-    5. Which of the following are Water-type Pokémon?
-    <br>
-    <label>
-        <input type="checkbox" name="water" id="q5_1" value="squirtle">
-        Squirtle
-    </label><br>
-    <label>
-        <input type="checkbox" name="water" id="q5_2" value="gyarados">
-        Gyarados
-    </label><br>
-    <label>
-        <input type="checkbox" name="water" id="q5_3" value="charmander">
-        Charmander
-    </label><br>
-    <label>
-        <input type="checkbox" name="water" id="q5_4" value="pikachu">
-        Pikachu
-    </label>
-    <br>
-    <h3 id="q5Feedback"></h3>
+    <div id="q5Div">
+        5. Which of the following are Water-type Pokémon?
+        <br>
+        <label>
+            <input type="checkbox" name="water" id="q5_1" value="squirtle">
+            Squirtle
+        </label><br>
+        <label>
+            <input type="checkbox" name="water" id="q5_2" value="gyarados">
+            Gyarados
+        </label><br>
+        <label>
+            <input type="checkbox" name="water" id="q5_3" value="charmander">
+            Charmander
+        </label><br>
+        <label>
+            <input type="checkbox" name="water" id="q5_4" value="pikachu">
+            Pikachu
+        </label>
+        <br>
+        <h3 id="q5Feedback"></h3>
+    </div>
 
     <br><br>
     <button>Submit Quiz</button>
