@@ -3,4 +3,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: lightcyan;
 }
+
+img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+

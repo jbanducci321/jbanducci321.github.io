@@ -16,11 +16,13 @@
 </head>
 <body>
 
-    <h1>Quiz</h1>
+    <h1>Pokémon Quiz</h1>
     <h2 id="scoreDisplay"></h2>
 
+    <h4 id="congratsDisplay"></h4>
+
     <div id="q1Div">
-        1. What was the first Pokémon?
+        1. What was the first Pokémon? <span id="q1img"></span>
         <br>
         <div id="q1ChoicesDiv"></div>
 
@@ -29,7 +31,7 @@
     <br><br>
 
     <div id="q2Div">
-        2. What Pokémon is the main villain in the first Pokémon movie?
+        2. What Pokémon is the main villain in the first Pokémon movie? <span id="q2img"></span>
         <br>
         <label>Enter name of the Pokémon:
             <input type="text" id="q2">
@@ -40,7 +42,7 @@
     <br><br>
 
     <div id="q3Div">
-        3. What year was the first Pokémon game released?
+        3. What year was the first Pokémon game released? <span id="q3img"></span>
         <br>
         <label>Enter the year:
             <input type="number" id="q3">
@@ -50,7 +52,7 @@
     <br><br>
 
     <div id="q4Div">
-        4. What type is Pikachu?
+        4. What type is Pikachu? <span id="q4img"></span>
         <br>
         <label for="q4">Which type is Pikachu?</label>
         <select id="q4" name="pikachu-type">
@@ -65,7 +67,7 @@
     <br><br>
 
     <div id="q5Div">
-        5. Which of the following are Water-type Pokémon?
+        5. Which of the following are Water-type Pokémon? <span id="q5img"></span>
         <br>
         <label>
             <input type="checkbox" name="water" id="q5_1" value="squirtle">
@@ -87,9 +89,10 @@
     </div>
 
     <br><br>
-    <button>Submit Quiz</button>
-
-    <span id="numAttempts"></span>
+    <button id="submitButton">Submit Quiz</button>
+    <div id="attemptsDiv">
+        <span>Number of Attempts: </span><span id="numAttempts"></span>
+    </div>
 
 
 </body>
