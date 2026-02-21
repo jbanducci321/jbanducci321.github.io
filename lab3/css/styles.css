@@ -1,18 +1,76 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #e9ddff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
 
-    background-color: lightcyan;
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png");
+
+    background-repeat: repeat;
+    background-size: 45px;
+    background-position: top left;
+}
+
+h1 {
+    color: #2b004f;
+    background-color: #f6f0ff;
+    border: 2px solid #3a0a6a;
+    border-radius: 8px;
+    width: 60%;
+    margin: 20px auto;
+}
+
+#q1Div,
+#q2Div,
+#q3Div,
+#q4Div,
+#q5Div {
+    width: 60%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f6f0ff;
+    border: 2px solid #3a0a6a;
+    border-radius: 8px;
+}
+
+#q1ChoicesDiv label {
+    display: block;
+    margin: 6px 0;
+}
+
+#q5Div label {
+    display: block;
+    margin: 6px 0;
+}
+
+input, select {
+    margin-top: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    margin-top: 15px;
+    background-color: #3a0a6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5c1ca8;
 }
 
 img {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
+    width: 18px;
+    height: 18px;
     margin-left: 5px;
 }
 
-
+#attemptsDiv {
+    background-color: #f6f0ff;
+    border: 2px solid #3a0a6a;
+    border-radius: 8px;
+    width: 60%;
+    margin: 20px auto;
+}
 
