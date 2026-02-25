@@ -1,0 +1,9 @@
+#authorInfoDiv {
+    display: flex;
+}
+
+img {
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+}
