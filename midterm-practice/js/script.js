@@ -15,15 +15,61 @@ let langChoices = [{lang:"Esperanto", abv:"ES", flag:"img/esperanto_flag.png"},
 
 async function submitQuotes() {
     let numQuotes = document.querySelector("#getQuoteInput").value;
+
+    let url = "https://csumb.space/api/famousQuotes/getQuotes.php?n=" + numQuotes;
     document.querySelector("#quoteError").style.display = "none";
     console.log(numQuotes);
     if (numQuotes <= 0 || numQuotes > 5 || numQuotes == "") {
+        document.querySelector("#quoteError").style.display = "block";
         document.querySelector("#quoteError").textContent = "Please enter a number between 1-5";
         document.querySelector("#quoteError").style.color = "red";
     }
     else {
+        document.querySelector("#quotesDiv").innerHTML = "";
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error("Error accessing API endpoint")
+            }
+            const data = await response.json();
 
+            for (let i of data) {
+                let fullName = i.firstName + " " + i.lastName;
+                let pElement = document.createElement("p");
+                pElement.textContent = i.quoteText + " -" + fullName;
+                document.querySelector("#quotesDiv").append(pElement);
+            }
+
+        } catch (err) {
+            if (err instanceof TypeError) {
+                alert("Error accessing API endpoint (network failure)");
+            } else {
+                alert(err.message);
+            }
+        } //catch
     }
+}
+
+async function randBackground() {
+    let url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=flowers";
+    let randNum = Math.floor(Math.random() * 49) + 1;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Error accessing API endpoint")
+        }
+        const data = await response.json();
+
+        document.body.style.backgroundImage = `url(${data.hits[randNum].webformatURL})`;
+
+    } catch (err) {
+        if (err instanceof TypeError) {
+            alert("Error accessing API endpoint (network failure)");
+        } else {
+            alert(err.message);
+        }
+    } //catch
+
 }
 
 async function translate() {
@@ -136,5 +182,8 @@ function shuffleLangChoices() {
     }
 
 }
-
+randBackground();
 getRandQuote();
+let tempImg = document.createElement("img");
+tempImg.src = "img/english_flag.png";
+document.querySelector("#flagDisplayDiv").append(tempImg);
