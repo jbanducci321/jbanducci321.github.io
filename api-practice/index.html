@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    <style>
+        body {
+            text-align: center;
+            background-size: cover;
+        }
+
+        select {
+            margin: 15px;
+            padding: 15px;
+            background-color: lightblue;
+        }
+
+        option {
+            background-color: darkcyan;
+        }
+
+        #textDiv {
+            /* background-color: aquamarine; */
+            background-color: rgba(127, 255, 212, 0.5);
+            border-radius: 25px;
+            padding: 30px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+        }
+    </style>
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.8/underscore-umd-min.js"></script>
+</head>
+<body>
+    <div id="textDiv">
+        <h1>Select Background</h1>
+        <select id="bgSelect">
+            <!-- <option value="none">Select One</option>
+            <option value="ocean">Ocean</option>
+            <option value="mountains">Mountains</option>
+            <option value="space">Space</option>
+            <option value="clouds">Clouds</option>
+            <option value="flowers">Flowers</option> -->
+        </select>
+    </div>
+    <!-- <button id="submitBtn">Submit</button> -->
+</body>
+</html>
