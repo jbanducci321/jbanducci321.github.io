@@ -1,3 +1,8 @@
+body {
+    text-align: center;
+    background-size: cover;
+}
+
 #authorInfoDiv {
     display: flex;
 }
@@ -6,4 +11,25 @@ img {
     width: auto;
     height: auto;
     margin-left: 5px;
+}
+
+#mainDiv {
+    /* background-color: aquamarine; */
+    background-color: rgba(160, 160, 160, 0.5);
+    border-radius: 25px;
+    padding: 30px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+#rubricDiv {
+    background-color: white;
+    border-radius: 25px;
+    padding: 30px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 }
